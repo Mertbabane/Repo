@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BGPC Network</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/5acf4d9e80.js" crossorigin="anonymous"></script>
+  <style>
+    /* Giriş/Kayıt Butonları üst sağda (artık kaldırıldı) */
+    /* Modal ve ilgili stiller (artık kaldırıldı) */
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="BGPC Logo" class="logo" />
+      <span class="server-name">BGPC Network</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Ana Menü</a></li>
+        <li><a href="#harita">Harita</a></li>
+        <li><a href="#sunucu">Sunucu</a></li>
+        <li><a href="#bilgi">Bilgi</a></li>
+        <li><a href="https://eastondean195.wixsite.com/justincityfourms">Forum</a></li>
+        <li><a href="https://discord.gg/soon">Discord</a></li>
+        <li><a href="https://mcrealmhub.com/realm-justin-city.454/vote">Oy Ver</a></li>
+        <li><a href="https://sites.google.com/view/justin-city/join">Katıl</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>BGPC Network’e Hoş Geldin!</h1>
+      <p class="server-ip" id="ip">realms.gg/hb7nB-TopWc</p>
+    </div>
+  </section>
+
+  <section id="harita" class="section-info">
+    <h2>Harita</h2>
+    <p>Sunucu haritamız hakkında bilgiler burada olacak. İstersen harita görseli veya açıklamalar ekleyebiliriz.</p>
+  </section>
+
+  <section id="sunucu" class="section-info">
+    <h2>Sunucu</h2>
+    <p>Sunucumuzun özellikleri, sürümü, aktif oyuncu sayısı vb. bilgiler burada yer alabilir.</p>
+  </section>
+
+  <section id="bilgi" class="section-info">
+    <h2>Bilgi</h2>
+    <p>Sunucu kuralları, sık sorulan sorular veya başka bilgiler bu kısımda olabilir.</p>
+  </section>
+
+  <script>
+    // IP kopyalama kodu
+    document.getElementById("ip").onclick = function () {
+      const textToCopy = this.textContent;
+      const tempInput = document.createElement("input");
+      tempInput.setAttribute("value", textToCopy);
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert("IP kopyalandı: " + textToCopy);
+    };
+  </script>
+</body>
+</html>
